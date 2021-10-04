@@ -1,0 +1,43 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<body>
+  <div class="top">
+    <a (click)="goBack()" class="previous round">&#8249;</a>  
+    <a (click)="logOut()" class="logout">
+      <mat-icon>person_outline</mat-icon>
+      Logout</a>
+  </div>
+
+  <div class="wrapper">
+    <div class="box a">
+      {{certainFilm.title}}
+      <br><br>
+      {{certainFilm.overview}}
+    </div>
+    <div class="box b">
+      <img 
+              [src]="'http://image.tmdb.org/t/p/w500/' + certainFilm.poster_path" 
+              alt="{{ certainFilm.title }}" 
+              />
+    </div>
+    <div class="box c">
+      <mat-icon>favorite</mat-icon> {{ certainFilm.popularity }}
+      <br><br>
+      <mat-icon>event</mat-icon> {{ certainFilm.release_date }}
+      <br><br>
+      <mat-icon>language</mat-icon>  {{ certainFilm.original_language }}        
+
+    </div>
+    <div class="box d">
+      Cast: <br><br>
+      <mat-icon>face</mat-icon>
+      <br>
+      <mat-icon>face</mat-icon>
+      <br>
+      <mat-icon>face</mat-icon>
+      <br>
+      <br>
+    </div>
+  </div>
+
+</body>
